@@ -1,0 +1,415 @@
+<! DOCTYPE html>
+<html>
+<head>
+    
+   
+        
+ 
+        
+     
+    
+<title>Interactive Book</title>    
+<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="css/styleindex.css">
+    <link rel="stylesheet" type="text/css" href="css/styleredes.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+         <meta name="description" content="Bootstrap HTML5">
+        <meta name="keywords" content="HTML5, CSS3, JavaScript">
+<meta charset="utf-8">    
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <style>
+     @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+* {
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  color: #333;
+  font-size: 100%;
+  line-height: 1.5;
+}
+body {
+  background-image: url(blacka.jpeg);
+  margin: 0;
+    background-size: cover;
+}
+nav {
+  --duration: .5s;
+  --easing: ease-in-out;
+  position: relative;
+  width: 220px;
+  margin: 20px;
+}
+nav ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  margin: -4px 0 0 0;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  background: #fff;
+  transform-origin: 0 0;
+  transition: transform var(--duration) var(--easing), color var(--duration) var(--easing);
+  transition-delay: var(--delay-out);
+  border-radius: 4px;
+  padding: 1em 1.52em;
+}
+nav a:hover {
+  background: #efefef;
+}
+nav .sub-menu a {
+  font-size: .9em;
+  color: #666666;
+  border-left: 2em solid white;
+  padding: .75em;
+  background: linear-gradient(to right, #dddddd 2px, #ffffff 2px);
+}
+nav .sub-menu a:hover {
+  background: linear-gradient(to right, #dddddd 2px, #efefef 2px);
+}
+nav header {
+  font-weight: 600;
+  display: block;
+  background: rgba(255, 255, 255, 0.5);
+  transform-origin: 0 0;
+  transition: transform var(--duration) var(--easing), color var(--duration) var(--easing);
+  transition-delay: var(--delay-out);
+  border-radius: 4px;
+  padding: 1em 1.52em;
+}
+nav header span {
+  border: none;
+  background: transparent;
+  font-size: 1.5em;
+  padding: 0;
+  cursor: pointer;
+  line-height: 1;
+  float: right;
+}
+nav footer button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  padding: calc(1em - 2px);
+  width: 100%;
+  transform-origin: 0 0;
+  transition: transform var(--duration) var(--easing);
+  transition-delay: calc(var(--duration) + (.1s * (var(--count) / 2)));
+  cursor: pointer;
+  outline: none;
+  background: #cdcdcd;
+  opacity: 0;
+}
+nav.closed a,
+nav.closed header {
+  transform: translateY(calc(var(--top) * -1)) scaleY(0.1) scaleX(0.2);
+  transition-delay: var(--delay-in);
+  color: transparent;
+}
+nav.closed footer button {
+  transition-delay: 0s;
+  transform: scaleY(0.7) scaleX(0.2);
+}
+
+    
+    </style>
+    
+    
+</head>
+    
+<body>
+    <header>
+    <input type="search" id="input-search" placeholder="Buscar aqui">
+    <center>
+    <div class="content-search">
+        <div class="content-table">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td><a href="#">Inicio</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="#">css</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="#">index</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="#">php</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="#">html</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="#">jueos</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="#">call of duty</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="#">need for speed</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="#">mario</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="#">pap</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="#">pop</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="#">carrear</a></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+        </center>
+    </header>
+    <script src="js/search.js"></script>
+    
+    
+    
+    
+    
+<center>
+    <h1>Bienvenido</h1>
+    </center>    
+    
+    <div id="general1">
+        
+        
+         <nav class="menu">
+    <header>Menu <span>×</span></header>
+    <ol>
+        <li class="menu-item"><a href="index.html">Home</a></li>
+        <li class="menu-item"><a href="sobre.html">Sobre nosotros</a></li>
+        <li class="menu-item">
+            <a href="#0">Libros</a>
+            <ol class="sub-menu">
+                <li class="menu-item"><a href="accion.html">Accion</a></li>
+                <li class="menu-item"><a href="romance.html">Romace</a></li>
+                <li class="menu-item"><a href="ciencia.html">Ciencia ficción</a></li>
+            </ol>
+        </li>
+        <li class="menu-item">
+            <a href="iniciosesion.html">Inicia sesion</a>
+           
+        </li>
+        <li class="menu-item"><a href="#0">Contact</a></li>
+    </ol>
+    <footer><button aria-label="Toggle Menu">Toggle</button></footer>
+</nav> 
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+    
+   var $els = $('.menu a, .menu header');
+var count = $els.length;
+var grouplength = Math.ceil(count/3);
+var groupNumber = 0;
+var i = 1;
+$('.menu').css('--count',count+'');
+$els.each(function(j){
+    if ( i > grouplength ) {
+        groupNumber++;
+        i=1;
+    }
+    $(this).attr('data-group',groupNumber);
+    i++;
+});
+
+$('.menu footer button').on('click',function(e){
+    e.preventDefault();
+    $els.each(function(j){
+        $(this).css('--top',$(this)[0].getBoundingClientRect().top + ($(this).attr('data-group') * -15) - 20);
+        $(this).css('--delay-in',j*.1+'s');
+        $(this).css('--delay-out',(count-j)*.1+'s');
+    });
+    $('.menu').toggleClass('closed');
+    e.stopPropagation();
+});
+
+// run animation once at beginning for demo
+setTimeout(function(){
+    $('.menu footer button').click();
+    setTimeout(function(){
+        $('.menu footer button').click();
+    }, (count * 100) + 500 );
+}, 1000);
+ 
+    
+</script>
+        
+      
+                         <div id="ofertas">
+           
+                         <center><h3>Ofertas</h3></center>
+                         <hr>
+                         <img src="img/Oferta.png">
+                          </div>
+    
+                           <div id="novedades">
+                           <center><h3>Ultimas noticias</h3></center>
+                           <div id="noticia1">
+                                 <center> <img src="img/libros.gif" width="240px" height="110px" >
+                                    <hr><h7>Libros gratis par qu permanezcas en tu casa</h7>
+
+                                      </center>
+                                        </div>
+                                  
+                                          <div id="noticia2">
+                                            <center><img src="/img/cu.jpg" width="250px" height="110px">
+                                               <hr><h7>Cursos gratis en linea</h7>
+                                                 </center>
+                                                   </div>  
+                                                      
+                                                    
+                               
+    
+                             <div id="body">
+                                 <center><h3>Body</h3></center>
+                        <center>
+                         <center><div id="noti1">
+                             <img src="img/arque.jpg" width="190" height="290">
+                           <hr><div style="color:B365D4;">Arqueologia.</div>
+                             <a class="boton_personalizado" href="#">Saber mas</a></div></center>
+
+                            
+                            <center><div id="noti2"> 
+                                <img src="img/alquimista.jpg" width="190" height="290">
+                            <hr><div style="color:B365D4;">Paulo Coelho - El alquimista</div>
+                                <a class="boton_personalizado" href="#">Saber mas</a></div></center>
+                            
+                            <center><div id="noti3"> 
+                                <img src="img/cancion%20fue%20y%20hielo.jpg" width="190" height="290">
+                             <hr><div style="color:B365D4;">Game of Thrones Canción de Hielo y Fego</div>
+                                <a class="boton_personalizado" href="#">Saber mas</a></div></center>   
+            
+            
+                                 <div id="noti4">
+                                     <img src="img/ciudad%20ceniza.jpg" width="190" height="290">
+                                <hr><div style="color:B365D4;">Shadow hunters- Ciudad de ceniza </div>
+                                     <a class="boton_personalizado" href="#">Saber mas</a></div>
+                                
+                                <div id="noti5">
+                                    <img src="img/dracula.jpg" width="190" height="290">
+                                    <hr><div style="color:B365D4;">DRACULA.</div>
+                                    <a class="boton_personalizado" href="#">Saber mas</a></div>
+                                                                                    
+                                 <div id="noti6"> 
+                                     <img src="img/escuela.jpg" width="190" height="290">
+                                     <hr><div style="color:B365D4;">Escuela de sustos.</div>
+                                     <a class="boton_personalizado" href="#">Saber mas</a></div>
+                            
+                                 <div id="noti7"> 
+                                     <img src="img/guerra%20y%20paz.jpg" width="190" height="290">
+                                     <hr><div style="color:B365D4;" >Guerra y Paz .</div>
+                                     <a class="boton_personalizado" href="#">Saber mas</a></div> 
+                            
+                                  <div id="noti8"> 
+                                    <img src="img/hornos.jpg" width="190" height="290">
+                                      <hr><div style="color:B365D4;">Los hornos de Hitler</div>                                             <a class="boton_personalizado" href="#">Saber mas</a></div>
+           
+                                <div id="noti9"> 
+                                    <img src="img/sangre.jpg" width="190" height="290">
+                                    <hr><div style="color:B365D4;">Sangre de campeones.</div>                       
+                                    <a class="boton_personalizado" href="#">Saber mas</a></div>                             
+                                 </center>
+                            </div>
+                               </div>
+                               
+                               
+                                             </div>
+                                                                                           
+                                    <div id="sobre">
+                                    <div id="noticias">
+                                        <center>
+                                <ul>
+    <li>
+     <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span  class="fa fa-facebook-official" aria-hidden="true"></span>
+        </a>
+    </li>
+    <li>
+     <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="fa fa-twitter" aria-hidden="true"></span>
+        </a>
+    </li>
+    <li>
+     <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="fa fa-google-plus-official" aria-hidden="true"></span>
+        </a>
+    </li>
+    <li>
+     <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="fa fa-linkedin-square" aria-hidden="true"></span>
+        </a>
+    </li>
+    <li>
+     <a href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span  class="fa fa-instagram" aria-hidden="true"></span>
+        </a>
+    </li> 
+</ul>    
+                                            </center>
+                                 </div>
+                                </div>
+    </body>
+</html>
+              
